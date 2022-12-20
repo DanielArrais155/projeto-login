@@ -33,7 +33,7 @@
 
     section#login{
         width: 950px;
-        height: 330px;
+        height: 305px;
     }
 
     section#login > div#imagem{
@@ -46,6 +46,10 @@
         float: left;
         width: 50%;
     }
+
+    form > div.campo{
+        margin-top: 10px 0px;
+    }
     
     div.campo input{
         padding-left: 33%;
@@ -57,6 +61,6 @@
 
     div#formulario > p{
         font-size: 0.8em;
-        margin: 20px 0px;
+        margin: 10px 0px;
     }
 }
