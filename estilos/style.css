@@ -72,6 +72,10 @@ form > div.campo{
     margin: 5px 0px;
 }
 
+div.campo > label{
+    display: none;
+}
+
 form > input[type=submit]{
     display: block;
     font-size: 1em;
