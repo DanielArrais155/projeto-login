@@ -63,7 +63,7 @@ form > div.campo{
     border: 2px solid #5f2c82;
     width: 100%;
     display: block;
-    height: 42px;
+    height: 40px;
     border-radius: 8px;
     margin: 5px 0px;
 }
@@ -73,21 +73,21 @@ div.campo > label{
 }
 
 div.campo > i{
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 2em;
     width: 40px;
-    padding: 5px;
+    padding: 3px;
 }
 
 div.campo > input{
-    background-color: #94cfcd;
+    background-color: #f3e2ff;
     font-size: 1em;
     width: calc(100% - 45px);
     height: 100%;
     border: 0px;
     border-radius: 8px;
     padding: 4px;
-    transform: translatey(-12px);
+    transform: translatey(-11px);
 }
 
 div.campo > input:focus-within{
