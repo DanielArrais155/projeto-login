@@ -19,7 +19,7 @@ main{
     width: 100vw;
 }
 
-section#login{
+#login{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -27,7 +27,7 @@ section#login{
 
     background-color: white;
     width: 250px;
-    height: 500px;
+    height: 550px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
 
@@ -36,81 +36,171 @@ section#login{
     transition-timing-function: ease;
 }
 
-section#login > div#imagem {
+#login > div#imagem {
     display: block;
     background: #5f2c82 url(../imagens/entrada.jpg ) no-repeat;
     background-size: cover;
     background-position: left bottom;
-    height: 200px;
+    height: 150px;
 }
 
-section#login > div#formulario{
+#login > div#formulario{
     display: block;
     padding: 10px;
+    
 }
 
-div#formulario > h1{
+main h1{
+    position: relative;
     text-align: center;
     margin-bottom: 5px;
 }
 
-div#formulario > p{
+main h1::before{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 25px;
+    bottom: 0px; 
+    border-radius: 8px;
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+}
+
+#formulario > p{
     padding-bottom: 5px;
     text-align: justify;
     font-size: 0.8em;
 }
 
-form > div.campo{
-    background-color: #f3e2ff;
-    border: 2px solid #5f2c82;
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.campo{
+    position:relative;
     width: 100%;
     display: block;
-    height: 43px;
+    height: 35px;
     border-radius: 8px;
     margin: 5px 0px;
 }
 
-div.campo > label{
-    display: none;
+.campo .underline::before{
+    content:'';
+    position: absolute;
+    height: 1.5px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
 }
 
-div.campo > i{
+
+.campo .underline::after{
+    content:'';
+    position: absolute;
+    height: 1.5px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #8e2de2, #4a00c0);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.campo input:focus ~ .underline::after{
+    transform: scaleX(1);
+}
+
+.campo > i{
     color: rgb(0, 0, 0);
     font-size: 2em;
     width: 40px;
     padding: 3px;
 }
 
-div.campo > input{
-    background-color: #f3e2ff;
+.campo > input{
     font-size: 1em;
     width: calc(100% - 45px);
     height: 98%;
     border: 0px;
     padding-left: 33px;
     border-radius: 6px;
+    outline: none;
     transform: translate(0px, -9px);
 }
 
-div.campo > input:focus-within{
+.campo > input::placeholder{
+    color: rgb(0, 0, 0, 0.5);
+}
+
+.campo > input:focus-within{
     background-color: white;
+}
+
+.campo > label{
+    display: none;
 }
 
 form > input[type=submit]{
     display: block;
     font-size: 1em;
+    font-weight: 300;
     width: 100%;
     height: 40px;
-    background-color: #49a09d;
+    margin-top: 5px;
+    background: linear-gradient(to left, #49a09d, #5f2c82);
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 form > input[type=submit]:hover{
-    background-color: #2b5c5a;
-    border: 1px solid black ;
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right, #49a09d, #5f2c82);
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.footer span{
+    color: rgb(0, 0, 0, 0.7);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.footer .social-field{
+    padding: 0.4rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.footer .social-field a i{
+    margin: 0 0.5rem;
+    width: 15px;
+}
+
+.footer .social-field a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer .social-field.twitter{
+    background: linear-gradient(to right, #56a7f2, #468aca);
+}
+
+.footer .social-field.facebook{
+    background: linear-gradient(to right, #1e3c72, #2a5298);
 }
 
 form > a.botao{
